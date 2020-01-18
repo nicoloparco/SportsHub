@@ -35,3 +35,65 @@ const fetchData = async () => {
     .trim();
 
   const data = JSON.parse(strippedData);
+  const { events } = data;
+
+  events.map(event => {
+    const { competitions, date, shortName, status } = event;
+
+    const home = competitions[0].competitors.find(
+      team => team.homeAway === "home"
+    );
+    const away = competitions[0].competitors.find(
+      team => team.homeAway === "away"
+    );
+    delete home.team.links;
+    delete home.team.uid;
+    delete home.team.id;
+    delete away.team.links;
+    delete away.team.uid;
+    delete away.team.id;
+
+    scores = [
+      ...scores,
+      {
+        startTime: date,
+        shortName,
+        status: {
+          inning: status.period,
+          state: status.type.state,
+          detail: status.type.detail,
+          shortDetail: status.type.shortDetail,
+          completed: status.type.completed
+        },
+        teams: {
+          awayTeam: {
+            ...away.team,
+            score: away.score
+          },
+          homeTeam: {
+            ...home.team,
+            score: home.score
+          }
+        }
+      }
+    ];
+  });
+
+  console.log("UPDATED!");
+};
+
+function startSchedule() {
+  fetchData();
+  setInterval(fetchData, 30000);
+}
+
+startSchedule();
+
+router.get("/baseball/mlb/events", (req, res) => {
+  res.json({
+    date: new Date(),
+    scores
+  });
+});
+
+module.exports = router;
