@@ -9,8 +9,8 @@ const router = express.Router();
 let scores: TScore[] = [];
 
 const fetchData = async () => {
-  console.log("Pulling data from https://www.espn.com/mlb/scoreboard");
-  const website = await fetch("https://www.espn.com/mlb/scoreboard")
+  console.log("Pulling data from https://www.espn.com/nfl/scoreboard");
+  const website = await fetch("https://www.espn.com/nfl/scoreboard")
     .then(res => res.text())
     .then(body => body);
 
