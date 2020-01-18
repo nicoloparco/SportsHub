@@ -1,4 +1,4 @@
-import { TScore } from "../interfaces/events";
+import { TScore } from "https://www.espn.com/mlb/scoreboard";
 
 const express = require("express");
 const cheerio = require("cheerio");
@@ -35,6 +35,7 @@ const fetchData = async () => {
     .trim();
 
   const data = JSON.parse(strippedData);
+
   const { events } = data;
 
   events.map(event => {
