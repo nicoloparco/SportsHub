@@ -3,7 +3,6 @@ import Article from "../Article";
 
 function Articles() {
     return(
-        <div className = "row">
             <div className = "col-md-7 my-3">
                 <div className = "container my-3 mx-1">
                     <Article />
@@ -25,58 +24,6 @@ function Articles() {
                     </div>
                 </div>
             </div>
-
-            <div className = "col-md-5 my-3">
-                <div className = "container my-3">   
-                    <div className = "container border 4px border-success my-5 rounded">
-                        <h3 className = "text-center">SCORES</h3>
-                            <div className = "container football border 4px border-success rounded">
-                                <h5>FOOTBALL</h5>
-                                    <div className = "container">
-                                        <div className = "row">
-                                            <div className = "col-md-4">Game 1</div>
-                                            <div className = "col-md-4">Game 2</div>
-                                            <div className = "col-md-4">Game 3</div>
-                                        </div>
-                                    </div>
-                            </div>
-
-                            <div className = "container border 4px border-success my-5 rounded">
-                                <h5>BASKETBALL</h5>
-                                    <div className = "container">
-                                        <div className = "row">
-                                            <div className = "col-md-4">Game 1</div>
-                                            <div className = "col-md-4">Game 2</div>
-                                            <div className = "col-md-4">Game 3</div>
-                                        </div>
-                                    </div>
-                            </div>
-
-                            <div className = "container border 4px border-success my-5 rounded">
-                                <h5>BASEBALL</h5>
-                                    <div className = "container">
-                                        <div className = "row">
-                                            <div className = "col-md-4">Game 1</div>
-                                            <div className = "col-md-4">Game 2</div>
-                                            <div className = "col-md-4">Game 3</div>
-                                        </div>
-                                    </div>
-                            </div>
-
-                            <div className = "container border 4px border-success my-5 rounded">
-                                <h5>SOCCER</h5>
-                                    <div className = "container">
-                                        <div className = "row">
-                                            <div className = "col-md-4">Game 1</div>
-                                            <div className = "col-md-4">Game 2</div>
-                                            <div className = "col-md-4">Game 3</div>
-                                        </div>
-                                    </div>
-                            </div>
-                    </div>
-                </div>
-            </div>
-        </div>
         
     )
 };

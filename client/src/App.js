@@ -1,6 +1,6 @@
 import React from 'react';
 import Nav from "./components/Nav"
-import Articles from "./components/Articles"
+import Main from "./components/Main"
 import Footer from "./components/Footer"
 import './App.css';
 
@@ -8,8 +8,8 @@ function App() {
   return (
     <div className="App">
       <Nav />
-      <div className="Articles">
-      <Articles />
+      <div className="Main">
+      <Main />
       </div>
       <Footer />
     </div>
