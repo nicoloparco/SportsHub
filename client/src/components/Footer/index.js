@@ -2,7 +2,7 @@ import React from "react"
 
 function Footer() {
     return(
-        <footer className = "footer mt-auto py-3 bg-success">
+        <footer className = "footer fixed-bottom mt-auto py-3 bg-success">
             <div className = "container">
                 <span className = "text-light float-left">
                     All Articles and Scores Belong to ESPN
