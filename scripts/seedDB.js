@@ -20,4 +20,12 @@ const postSeed = [
 
 db.Post
 .remove({})
-.then(() => db.Post)
+.then(() => db.Post.insertMany(postSeed))
+.then(data => {
+    console.log(data) + "posted";
+    process.exit(0);
+})
+.catch(err => {
+    console.log(err);
+    process.exit(1);
+})
