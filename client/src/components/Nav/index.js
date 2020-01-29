@@ -7,7 +7,7 @@ function Nav() {
             <h3 className = "font-weight-bold">SportsHub</h3>
         </a>
         <div className = "text-right">
-          <p class="text-light">Sort Articles and Posts by Sport</p>
+          <p className="text-light">Sort Articles and Posts by Sport</p>
           <a href="/football"><i class="fas fa-football-ball mx-3 fa-2x pb-1" id="alph" style={{color: "white"}}></i></a>
           <a href="/basketball"><i class="fas fa-basketball-ball mx-3 fa-2x pb-1" style={{color: "white"}}></i></a>
           <a href="/baseball"><i class="fas fa-baseball-ball mx-3 fa-2x pb-1" style={{color: "white"}}></i></a>
