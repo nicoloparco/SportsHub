@@ -4,12 +4,12 @@ const http = require('http');
 const bodyParser = require('body-parser');
 const morgan = require('morgan');
 const app = express();
-const router = require('./server/router');
+const router = require('./router');
 const mongoose = require('mongoose');
 // const cors = require('cors');  // we don't need it anymore, because we use proxy server instead
 
 // DB Setup (connect mongoose and instance of mongodb)
-mongoose.connect('mongodb://192.168.99.100/usersignupdb');
+mongoose.connect('mongodb://192.168.99.100/registrationpage');
 
 // App Setup (morgan and body-parser are middleware in Express)
 app.use(morgan('combined'));  // middleware for logging
