@@ -14,7 +14,7 @@ function Article() {
                     
                 <div className = "articleButtons my-1">
                     <div className = "articleComments d-inline">
-                        <button className = "btn btn outline-success d-inline commentButton">
+                        <button className = "btn btn d-inline commentButton" style = {{backgroundColor: "#f0f1f5"}}>
                             <span className = "d-inlne mx-1">
                                 <i class="fas fa-comments"></i>
                             </span>
@@ -22,7 +22,7 @@ function Article() {
                         </button>
                     </div>
                     <div className = "articleSave d-inline">
-                        <button className = "btn btn outline-success d-inline saveButton">
+                        <button className = "btn btn d-inline saveButton" style = {{backgroundColor: "#f0f1f5"}}>
                             <span className = "d-inlne mx-1">
                                 <i class="fas fa-bookmark"></i>
                             </span>
@@ -30,7 +30,7 @@ function Article() {
                         </button>
                     </div>
                     <div className = "articleShare d-inline">
-                        <button className = "btn btn outline-success d-inline shareButton">
+                        <button className = "btn btn d-inline shareButton" style = {{backgroundColor: "#f0f1f5"}}>
                             <span className = "d-inlne mx-1">
                                 <i class="fas fa-retweet"></i>
                             </span>
