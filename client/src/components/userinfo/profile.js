@@ -90,7 +90,7 @@ class Profile extends Component {
           <Field name="address" component={this.renderInput} type="text" label="Address:" />
           <Field name="occupation" component={this.renderInput} type="text" label="Occupation:" />
           <Field name="description" component={this.renderTextarea} label="Description:" />
-          <button action="submit" className="btn btn-primary">Update Profile</button>
+          <button action="submit" className="btn btn-success">Update Profile</button>
         </form>
       </div>
     );
