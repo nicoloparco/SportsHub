@@ -32,12 +32,14 @@ class Article extends Component {
     else{
 
     return(
-      <div className="container border 4px border-success my-3 rounded">
+      <div data-spy="scroll" className="container border 4px border-success my-3 rounded">
 
           <ul>
             {items.articles.map((item,i) => (
               <li key={i}>
-                <h3>Title</h3>: {item.title} | url: {item.url} |{item.urlToImage}
+                <h3>{item.title}</h3>
+                <img src = {item.urlToImage} style={{width:"200px"}}></img>
+                <a href = {item.url}><p>Click here to view article</p></a>
               </li>
 
             ))}
