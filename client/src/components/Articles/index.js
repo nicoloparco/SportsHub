@@ -45,9 +45,6 @@ class Article extends Component {
                     <div className="col-md-4"><img className = "img-thumbnail my-2" src = {item.urlToImage} style = {{width:"auto", height:"150px"}}></img></div>
                     <div className="col-md-8"><p className ="my-4">{item.description}</p></div>
                 </div>
-                {/* <img className = "img-thumbnail my-2" src = {item.urlToImage} style = {{width:"100px", height:"100px"}}></img> */}
-                {/* <p className ="text-right">{item.description}</p> */}
-                <a href = {item.url}></a>
 
             
               </div>
