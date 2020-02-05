@@ -16,7 +16,7 @@ class Header extends Component {
     if (this.props.authenticated) {
       // show a dropdown menu for authenticated user
       return (
-        <div className="navbar-nav nav-item dropdown ml-auto">
+        <div className="navbar nav-item dropdown ml-auto">
           <a className="nav-link dropdown-toggle" href="http://example.com" id="dropdown02" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style={{color: "white"}}>{this.props.username}</a>
           <div className="dropdown-menu" aria-labelledby="dropdown02">
             <Link className="dropdown-item" to="/my_posts">Your Posts</Link>
@@ -30,26 +30,28 @@ class Header extends Component {
     } else {
       // show a link to sign in or sign up
       return (
-        <div className="navbar-nav nav-item dropdown ml-auto">
+        <div className="navbar nav-item dropdown ml-auto">
         <a className="nav-link dropdown-toggle" href="http://example.com" id="dropdown02" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style={{color: "white"}}>Login👤</a>
         <div className="dropdown-menu" aria-labelledby="dropdown02">
           <Link className="dropdown-item" to="/signup">Sign Up</Link>
           <Link className="dropdown-item" to="/signin">Sign In</Link>
          </div>
          {/* <p class="text-light">Sort Articles and Posts by Sport</p> */}
-          <a href="/football"><i class="fas fa-football-ball mx-3 fa-2x pb-1" style={{color: "white"}}></i></a>
+         <div className = "text-left">
+          <a href="/football"><i class="fas fa-football-ball mx-3 fa-2x pb-1" id="alph" style={{color: "white"}}></i></a>
           <a href="/basketball"><i class="fas fa-basketball-ball mx-3 fa-2x pb-1" style={{color: "white"}}></i></a>
           <a href="/baseball"><i class="fas fa-baseball-ball mx-3 fa-2x pb-1" style={{color: "white"}}></i></a>
           <a href="/soccer"><i class="fas fa-futbol mx-3 fa-2x pb-1" style={{color: "white"}}></i></a>
-      </div>
+        </div>
+      </div> 
       );
     }
   }
   
   render() {
     return (
-      <nav className="navbar navbar-inverse bg-success navbar-toggleable-md">
-        <div className="container">
+        <nav className = "navbar navbar-dark bg-success py-0">
+        {/* <div className="container"> */}
           {/* <button className="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarsExampleContainer" aria-controls="navbarsExampleContainer" aria-expanded="false" aria-label="Toggle navigation">
             <span className="navbar-toggler-icon" />
           </button> */}
@@ -57,6 +59,7 @@ class Header extends Component {
           <a className = "navbar-brand" href="/">
             <h3 className = "font-weight-bold">SportsHub</h3>
         </a>
+        
           {/* <div className="collapse navbar-collapse" id="navbarsExampleContainer">
             <ul className="navbar-nav mr-auto">
               <li className="nav-item">
@@ -73,7 +76,7 @@ class Header extends Component {
             <div className="ml-auto">
               {this.renderLinks()}
             </div>
-          </div>
+          {/* </div> */}
         {/* </div> */}
       </nav>
     );

@@ -8,7 +8,7 @@ import reduxThunk from 'redux-thunk';
 import Header from './components/header';
 import Footer from './components/footer';
 import NoMatch from './components/nomatch';
-import Welcome from './components/welcome';
+import Main from './components/main';
 import Signin from './components/auth/signin';
 import Signup from './components/auth/signup';
 import RequireAuth from './components/auth/require_auth';
@@ -39,7 +39,7 @@ ReactDOM.render(
         <Header />
         <div className="container" id="content">
           <Switch>
-            <Route exact path='/' component={Welcome} />
+            <Route exact path='/' component={Main} />
             <Route path='/signin' component={Signin} />
             <Route path='/signup' component={Signup} />
             <Route path="/profile" component={RequireAuth(Profile)} />
