@@ -45,7 +45,7 @@ class CommentNew extends Component {
         {this.renderAlert()}
         <form onSubmit={handleSubmit(this.handleFormSubmit.bind(this))}>
           <Field name="comment" component={this.renderTextEditor} />
-          <button action="submit" className="btn btn-primary">Post Your Comment</button>
+          <button action="submit" className="btn btn-success">Post Your Comment</button>
         </form>
       </div>
     );

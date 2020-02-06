@@ -36,13 +36,12 @@ class Header extends Component {
           <Link className="dropdown-item" to="/signup">Sign Up</Link>
           <Link className="dropdown-item" to="/signin">Sign In</Link>
          </div>
-         {/* <p class="text-light">Sort Articles and Posts by Sport</p> */}
          <div className = "text-left">
-          <a href="/football"><i class="fas fa-football-ball mx-3 fa-2x pb-1" id="alph" style={{color: "white"}}></i></a>
-          <a href="/basketball"><i class="fas fa-basketball-ball mx-3 fa-2x pb-1" style={{color: "white"}}></i></a>
-          <a href="/baseball"><i class="fas fa-baseball-ball mx-3 fa-2x pb-1" style={{color: "white"}}></i></a>
-          <a href="/soccer"><i class="fas fa-futbol mx-3 fa-2x pb-1" style={{color: "white"}}></i></a>
-        </div>
+        <a href="/football"><i class="fas fa-football-ball mx-3 fa-2x pb-1" id="alph" style={{color: "white"}}></i></a>
+        <a href="/basketball"><i class="fas fa-basketball-ball mx-3 fa-2x pb-1" style={{color: "white"}}></i></a>
+        <a href="/baseball"><i class="fas fa-baseball-ball mx-3 fa-2x pb-1" style={{color: "white"}}></i></a>
+        <a href="/soccer"><i class="fas fa-futbol mx-3 fa-2x pb-1" style={{color: "white"}}></i></a>
+      </div>
       </div> 
       );
     }

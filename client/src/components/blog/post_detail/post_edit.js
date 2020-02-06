@@ -68,7 +68,7 @@ class PostEdit extends Component {
           <Field name="title" component={this.renderInput} type="text" label="Title:" placeholder="Enter your title" required={true} />
           <Field name="categories" component={this.renderInput} type="text" label="Categories:" placeholder="Enter your categories, use ',' to separate them" required={true} />
           <Field name="content" component={this.renderTextEditor} label="Content:" />
-          <button action="submit" className="btn btn-primary">Publish</button>
+          <button action="submit" className="btn btn-success">Publish</button>
         </form>
       </div>
     );
