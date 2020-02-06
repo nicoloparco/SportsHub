@@ -36,7 +36,8 @@ class Header extends Component {
           <Link className="dropdown-item" to="/signup">Sign Up</Link>
           <Link className="dropdown-item" to="/signin">Sign In</Link>
          </div>
-         <div className = "text-left">
+         <div className = "text-right">
+         {/* <p className="text-light">Sort Articles and Posts by Sport</p> */}
         <a href="/football"><i class="fas fa-football-ball mx-3 fa-2x pb-1" id="alph" style={{color: "white"}}></i></a>
         <a href="/basketball"><i class="fas fa-basketball-ball mx-3 fa-2x pb-1" style={{color: "white"}}></i></a>
         <a href="/baseball"><i class="fas fa-baseball-ball mx-3 fa-2x pb-1" style={{color: "white"}}></i></a>
@@ -65,7 +66,7 @@ class Header extends Component {
                 <Link className="nav-link" to="/posts"></Link>
               </li>
               <li className="nav-item">
-                <a className="nav-link" target="_blank" rel="noopener noreferrer" href="https://github.com/nicoloparco/bootcamp-final-project"></a>
+                <a className="nav-link" target="_blank" rel="noopener noreferrer" href="https://github.com/nicoloparco/bootcamp-final-project">Github</a>
               </li>
             </ul> */}
             {/* <form className="form-inline my-2 my-md-0">

@@ -1,17 +1,13 @@
-/* Sticky footer styles
--------------------------------------------------- */
 html {
-    position: relative;
-    min-height: 100%; 
-  }
-  body {
-    /* Margin bottom by footer height */
-    font-family: 'Libre Caslon Text', serif;
-    background-color: #f0f1f5;
-    /* margin: 0 10px 60px 29px; */
-    /* margin-bottom: 60px; */
-  }
-  .footer {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  font-family: 'Libre Caslon Text', serif;
+  background-color: #f0f1f5;
+}
+
+.footer {
     color: #fff;
     /* position: absolute;
     bottom: 0;
@@ -23,9 +19,12 @@ html {
    }
    /* Custom page CSS 
   -------------------------------------------------- * */
-  /* .container {
-    border: 20px solid black !important
-  } */
+  
+  .container {
+    min-width: 100%;
+    margin: 0 ;
+    /* border: 20px solid black !important */
+  }
 
   /* #content {
     margin-top: 90px;
