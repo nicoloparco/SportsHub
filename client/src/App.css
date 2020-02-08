@@ -5,3 +5,12 @@ body {
 a {
   text-decoration: none!important
 }
+.date {
+  font-weight: bold
+}
+.scoreWinner {
+  font-weight: bold
+}
+.postDate {
+  font-style: italic
+}
