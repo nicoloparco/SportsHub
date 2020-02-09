@@ -69,7 +69,7 @@ body {
     /* padding: 19px 29px 29px; */
     padding: 40px;
     /* margin: 0 auto 20px; */
-    margin: 50px 0 50px 0;
+    margin: 0;
   }
   
   .f6 {
@@ -78,4 +78,8 @@ body {
   
   .text-grey {
     color: #9199a1 !important;
+  }
+
+  .border{
+    background-color: #ffffff;
   }

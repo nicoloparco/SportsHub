@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { fetchPosts } from '../../actions/index';
 
+
 class PostList extends Component {
 
   componentDidMount() {
@@ -41,8 +42,11 @@ class PostList extends Component {
         <Link className="btn btn-success mb-5" to={'/posts/new'}>Publish A New Post</Link>
         {_.map(this.props.posts, post => {
           return this.renderPostSummary(post);
+          
         })}
+     
       </div>
+      
     );
   }
 }
