@@ -1,6 +1,9 @@
 import React, {Component} from 'react';
 import { Link } from 'react-router-dom';
-import Post from "./post";
+import PostList from "./blog/post_list";
+import Comments from "./blog/post_detail/comments";
+
+
 
 
 
@@ -39,7 +42,8 @@ class Welcome extends Component {
       <div className= "col-md-7">
       <div className = "container my-1 mx-1">
       <div className="container" id="scrollbar" data-target="articles" style={{overflow:"scroll", height:"750px"}}>
-      <Post />
+      <PostList />
+  
             {items.articles.map((item,i) => (
               <div key={i} className = "container border  my-3" id = "articles" >
                   <section id ="scrollArticle"></section>
@@ -50,22 +54,12 @@ class Welcome extends Component {
                 </div>
                 <div className = "articleButtons my-1 text-right">
                     <div className = "articleComments d-inline">
-                        {/* <button className = "btn btn d-inline commentButton" style = {{backgroundColor: "#f0f1f5"}}>  */}
-                            <span className = "d-inlne mx-1">
-                                <i class="fas fa-comments"></i>
-                                <Link className = "btn btn d-inline commentButton" to="/comments" style = {{backgroundColor: "#f0f1f5"}}>Comments</Link>
-                            </span>  
-                        {/* </button>  */}
+                            <Comments /> 
+                            
+                <Link className = "btn btn d-inline commentButton" to="/comments/new" style = {{backgroundColor: "#f0f1f5"}}><i className="fas fa-comments"></i></Link>
+          
                     </div>
-                    <div className = "articleSave d-inline">
-                        <button className = "btn btn d-inline saveButton" style = {{backgroundColor: "#f0f1f5"}}>
-                            <span className = "d-inlne mx-1">
-                                <i class="fas fa-bookmark"></i>
-                            </span>
-                            Save
-                        </button>
-                        
-                    </div>
+                    
                 </div>
             </div>
             ))}

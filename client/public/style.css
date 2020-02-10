@@ -67,7 +67,7 @@ body {
   .post {
     max-width: 800px;
     /* padding: 19px 29px 29px; */
-    padding: 40px;
+    padding: 10px;
     /* margin: 0 auto 20px; */
     margin: 0;
   }
@@ -82,4 +82,5 @@ body {
 
   .border{
     background-color: #ffffff;
+    
   }

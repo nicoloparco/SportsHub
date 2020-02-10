@@ -19,8 +19,11 @@ import PostNew from './components/blog/post_new';
 import PostDetail from './components/blog/post_detail/index';
 import PostMine from './components/blog/post_mine';
 
+
 import reducers from './reducers';
 import { AUTH_USER } from './actions/types';
+import comments from './components/blog/post_detail/comments';
+import comment_new from './components/blog/post_detail/comment_new';
 
 const createStoreWithMiddleware = applyMiddleware(reduxThunk)(createStore);
 const store = createStoreWithMiddleware(reducers);
@@ -48,6 +51,8 @@ ReactDOM.render(
             <Route path='/posts/new' component={RequireAuth(PostNew)} />
             <Route path='/posts/:id' component={PostDetail} />
             <Route path='/my_posts' component={RequireAuth(PostMine)} />
+            <Route path='/comments/new' component={RequireAuth(comment_new)} />
+            <Route path='/comments' component={RequireAuth(comments)} />
             <Route component={NoMatch} />
           </Switch>
         </div>

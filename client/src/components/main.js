@@ -1,7 +1,7 @@
 import React from "react";
 import Welcome from "./welcome";
 import Scores from "./scores";
-import { Link } from 'react-router-dom';
+
 
 
 

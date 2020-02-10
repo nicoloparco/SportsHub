@@ -17,7 +17,7 @@ class Header extends Component {
       // show a dropdown menu for authenticated user
       return (
         <div className="navbar nav-item dropdown ml-auto">
-          <a className="nav-link dropdown-toggle" href="http://example.com" id="dropdown02" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style={{color: "white"}}>{this.props.username}</a>
+          <a className="nav-link dropdown-toggle" href="http://example.com" id="dropdown02" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style={{color: "white"}}>{this.props.username}👤</a>
           <div className="dropdown-menu" aria-labelledby="dropdown02">
             <Link className="dropdown-item" to="/my_posts">Your Posts</Link>
             <Link className="dropdown-item" to="/profile">Your Profile</Link>
@@ -26,11 +26,10 @@ class Header extends Component {
             <Link className="dropdown-item" to="/" onClick={this.props.signoutUser}>Sign out</Link>
           </div>
           <div className = "text-right">
-         {/* <p className="text-light">Sort Articles and Posts by Sport</p> */}
-        <a href="/football"><i class="fas fa-football-ball mx-3 fa-2x pb-1" id="alph" style={{color: "white"}}></i></a>
-        <a href="/basketball"><i class="fas fa-basketball-ball mx-3 fa-2x pb-1" style={{color: "white"}}></i></a>
-        <a href="/baseball"><i class="fas fa-baseball-ball mx-3 fa-2x pb-1" style={{color: "white"}}></i></a>
-        <a href="/soccer"><i class="fas fa-futbol mx-3 fa-2x pb-1" style={{color: "white"}}></i></a>
+        <a href="/football"><i className="fas fa-football-ball mx-3 fa-2x pb-1" id="alph" style={{color: "white"}}></i></a>
+        <a href="/basketball"><i className="fas fa-basketball-ball mx-3 fa-2x pb-1" style={{color: "white"}}></i></a>
+        <a href="/baseball"><i className="fas fa-baseball-ball mx-3 fa-2x pb-1" style={{color: "white"}}></i></a>
+        <a href="/soccer"><i className="fas fa-futbol mx-3 fa-2x pb-1" style={{color: "white"}}></i></a>
       </div>
         </div>
       );
@@ -44,11 +43,10 @@ class Header extends Component {
           <Link className="dropdown-item" to="/signin">Sign In</Link>
          </div>
          <div className = "text-right">
-         {/* <p className="text-light">Sort Articles and Posts by Sport</p> */}
-        <a href="/football"><i class="fas fa-football-ball mx-3 fa-2x pb-1" id="alph" style={{color: "white"}}></i></a>
-        <a href="/basketball"><i class="fas fa-basketball-ball mx-3 fa-2x pb-1" style={{color: "white"}}></i></a>
-        <a href="/baseball"><i class="fas fa-baseball-ball mx-3 fa-2x pb-1" style={{color: "white"}}></i></a>
-        <a href="/soccer"><i class="fas fa-futbol mx-3 fa-2x pb-1" style={{color: "white"}}></i></a>
+        <a href="/football"><i className="fas fa-football-ball mx-3 fa-2x pb-1" style={{color: "white"}}></i></a>
+        <a href="/basketball"><i className="fas fa-basketball-ball mx-3 fa-2x pb-1" style={{color: "white"}}></i></a>
+        <a href="/baseball"><i className="fas fa-baseball-ball mx-3 fa-2x pb-1" style={{color: "white"}}></i></a>
+        <a href="/soccer"><i className="fas fa-futbol mx-3 fa-2x pb-1" style={{color: "white"}}></i></a>
       </div>
       </div> 
       );
@@ -78,7 +76,7 @@ class Header extends Component {
             </ul> */}
             {/* <form className="form-inline my-2 my-md-0">
               <input className="form-control mr-sm-2" type="text" placeholder="Search Post" />
-              <button className="btn btn-outline-success my-2 my-sm-0" type="submit"></button>
+              <button className="btn btn-outline-warning my-2 my-sm-0" type="submit"></button>
             </form> */}
             <div className="ml-auto">
               {this.renderLinks()}
