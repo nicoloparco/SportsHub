@@ -46,7 +46,7 @@ export function signinUser({ email, password }, historyPush, historyReplace) {
         });
 
         // - Redirect (PUSH) to the route '/posts'
-        historyPush('/posts');
+        historyPush('/');
       })
       .catch(() => {  // If request is bad (sign in failed) ...
 

@@ -29,7 +29,7 @@ class Header extends Component {
         <i className="fas fa-football-ball mx-3 fa-lg pb-1" id="alph" style={{color: "white"}}></i>
         <i className="fas fa-basketball-ball mx-3 fa-lg pb-1" style={{color: "white"}}></i>
         <i className="fas fa-baseball-ball mx-3 fa-lg pb-1" style={{color: "white"}}></i>
-        ><i className="fas fa-futbol mx-3 fa-2x pb-1" style={{color: "white"}}></i>
+        <i className="fas fa-futbol mx-3 fa-lg pb-1" style={{color: "white"}}></i>
       </div>
         </div>
       );
