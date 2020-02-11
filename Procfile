@@ -1,1 +1,1 @@
-web : cd server && node index.js
+web : "concurrently \"cd server && node index.js\" \"cd client && npm run start\"",
