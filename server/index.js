@@ -8,9 +8,12 @@ const router = require('./router');
 const mongoose = require('mongoose');
 // const cors = require('cors');  // we don't need it anymore, because we use proxy server instead
 
-// DB Setup (connect mongoose and instance of mongodb)
-const MONGODB_URI = process.env.MONGODB_URI || "mongodb://192.168.99.100/registrationpage";
 
+if (process.env.NODE_ENV === "production") {
+    app.use(express.static("client/build"));
+  }
+// DB Setup (connect mongoose and instance of mongodb)
+mongoose.connect(process.env.MONGODB_URI || "mongodb://192.168.99.100/registrationpage");
 
 // App Setup (morgan and body-parser are middleware in Express)
 app.use(morgan('combined'));  // middleware for logging
