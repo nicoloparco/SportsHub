@@ -2,7 +2,7 @@ import React from "react";
 
 function Nav() {
   return (
-    <nav className = "navbar navbar-dark bg-success py-0">
+    <nav className = "navbar navbar-dark bg-success">
         <a className = "navbar-brand" href="/">
             <h5 className = "font-weight-bold">SportsHub</h5>
         </a>
