@@ -26,10 +26,10 @@ class Header extends Component {
             <Link className="dropdown-item" to="/" onClick={this.props.signoutUser}>Sign out</Link>
           </div>
           <div className = "text-right">
-        <a href="/football"><i className="fas fa-football-ball mx-3 fa-2x pb-1" id="alph" style={{color: "white"}}></i></a>
-        <a href="/basketball"><i className="fas fa-basketball-ball mx-3 fa-2x pb-1" style={{color: "white"}}></i></a>
-        <a href="/baseball"><i className="fas fa-baseball-ball mx-3 fa-2x pb-1" style={{color: "white"}}></i></a>
-        <a href="/soccer"><i className="fas fa-futbol mx-3 fa-2x pb-1" style={{color: "white"}}></i></a>
+        <i className="fas fa-football-ball mx-3 fa-lg pb-1" id="alph" style={{color: "white"}}></i>
+        <i className="fas fa-basketball-ball mx-3 fa-lg pb-1" style={{color: "white"}}></i>
+        <i className="fas fa-baseball-ball mx-3 fa-lg pb-1" style={{color: "white"}}></i>
+        ><i className="fas fa-futbol mx-3 fa-2x pb-1" style={{color: "white"}}></i>
       </div>
         </div>
       );
@@ -43,10 +43,10 @@ class Header extends Component {
           <Link className="dropdown-item" to="/signin">Sign In</Link>
          </div>
          <div className = "text-right">
-        <a href="/football"><i className="fas fa-football-ball mx-3 fa-2x pb-1" style={{color: "white"}}></i></a>
-        <a href="/basketball"><i className="fas fa-basketball-ball mx-3 fa-2x pb-1" style={{color: "white"}}></i></a>
-        <a href="/baseball"><i className="fas fa-baseball-ball mx-3 fa-2x pb-1" style={{color: "white"}}></i></a>
-        <a href="/soccer"><i className="fas fa-futbol mx-3 fa-2x pb-1" style={{color: "white"}}></i></a>
+        <i className="fas fa-football-ball mx-3 fa-lg" style={{color: "white"}}></i>
+        <i className="fas fa-basketball-ball mx-3 fa-lg" style={{color: "white"}}></i>
+        <i className="fas fa-baseball-ball mx-3 fa-lg" style={{color: "white"}}></i>
+        <i className="fas fa-futbol mx-3 fa-lg" style={{color: "white"}}></i>
       </div>
       </div> 
       );
@@ -55,14 +55,14 @@ class Header extends Component {
   
   render() {
     return (
-        <nav className = "navbar navbar-dark bg-success py-0">
+        <nav className = "navbar navbar-dark bg-success">
         {/* <div className="container"> */}
           {/* <button className="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarsExampleContainer" aria-controls="navbarsExampleContainer" aria-expanded="false" aria-label="Toggle navigation">
             <span className="navbar-toggler-icon" />
           </button> */}
           <Link className="navbar-brand" to="/"></Link>
           <a className = "navbar-brand" href="/">
-            <h3 className = "font-weight-bold">SportsHub</h3>
+            <h5 className = "font-weight-bold">SportsHub</h5>
         </a>
         
           {/* <div className="collapse navbar-collapse" id="navbarsExampleContainer">
