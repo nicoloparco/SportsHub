@@ -16,11 +16,11 @@ function Scores () {
                                             <div className = "container border border-success rounded my-3">
                                             <p className = "date">02/03/2020</p>
                                                 <div className = "container my-3">
-                                                    <img src="https://ssl.gstatic.com/onebox/media/sports/logos/0nQXN6OF7wnLY3hJz8lZJQ_48x48.png"></img>
+                                                    <img src="https://ssl.gstatic.com/onebox/media/sports/logos/0nQXN6OF7wnLY3hJz8lZJQ_48x48.png" alt="livescore"></img>
                                                     <p className = "d-inline mx-1">Miami Heat (MIA)</p><span className = "scoreWinner mx-3">137</span>
                                                 </div>
                                                 <div className = "container my-3">
-                                                    <img src="https://ssl.gstatic.com/onebox/media/sports/logos/US6KILZue2D5766trEf0Mg_48x48.png"></img>
+                                                    <img src="https://ssl.gstatic.com/onebox/media/sports/logos/US6KILZue2D5766trEf0Mg_48x48.png"alt="livescore2"></img>
                                                     <p className="d-inline mx-1">Philadelphia 76ers (PHI)</p><span className = "scoreLoser mx-3">106</span>
                                                 </div>
                                             </div>
