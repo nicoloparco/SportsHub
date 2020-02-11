@@ -9,14 +9,9 @@ const mongoose = require('mongoose');
 // const cors = require('cors');  // we don't need it anymore, because we use proxy server instead
 
 
-if (process.env.NODE_ENV === 'production') {
-  // Serve any static files
-  app.use(express.static(path.join(__dirname, 'client/build')))
-  // Handle React routing, return all requests to React app
-  app.get('*', (request, response) => {
-    response.sendFile(path.join(__dirname, 'client/build', 'index.html'))
-  })
-}
+// if (process.env.NODE_ENV === "production") {
+//     app.use(express.static("/server/index.js"));
+//   }
 // DB Setup (connect mongoose and instance of mongodb)
 mongoose.connect(process.env.MONGODB_URI || "mongodb://dennis_the14th:gracie1@ds163480.mlab.com:63480/heroku_v53xql53");
 
