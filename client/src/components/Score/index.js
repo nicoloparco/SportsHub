@@ -1,12 +1,13 @@
 import React from "react";
+import Score from "../../API"
 
-function Score() {
+function Display() {
     return(
         <div className = "container football border 4px border-success rounded">
                                 <h5>FOOTBALL</h5>
                                     <div className = "container">
                                         <div className = "row">
-                                            <div className = "col-md-4">Game 1</div>
+                                            <Score />
                                             <div className = "col-md-4">Game 2</div>
                                             <div className = "col-md-4">Game 3</div>
                                         </div>
@@ -15,4 +16,4 @@ function Score() {
     )
 }
 
-export default Score;
+export default Display;

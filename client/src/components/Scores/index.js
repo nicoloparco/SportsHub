@@ -1,5 +1,5 @@
 import React from "react" ;
-import Score from "../Score";
+import Display from "../Score"
 
 function Scores () {
     return (
@@ -7,7 +7,7 @@ function Scores () {
                 <div className = "container my-3">   
                     <div className = "container border 4px border-success my-5 rounded">
                         <h3 className = "text-center">SCORES</h3>
-                            <Score />
+                            <Display />
 
                             <div className = "container border 4px border-success my-5 rounded">
                                 <h5>BASKETBALL</h5>
