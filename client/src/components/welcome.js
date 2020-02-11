@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import { Link } from 'react-router-dom';
 import PostList from "./blog/post_list";
-import Comments from "./blog/post_detail/comments";
+
 
 
 
@@ -54,10 +54,10 @@ class Welcome extends Component {
                 </div>
                 <div className = "articleButtons my-1 text-right">
                     <div className = "articleComments d-inline">
-                            <Comments /> 
+          
                             
                 <Link className = "btn btn d-inline commentButton" to="/comments/new" style = {{backgroundColor: "#f0f1f5"}}><i className="fas fa-comments"></i></Link>
-          
+                
                     </div>
                     
                 </div>

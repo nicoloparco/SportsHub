@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { fetchPosts } from '../../actions';
+import Comments from "./post_detail/comments";
 
 
 
@@ -33,8 +34,9 @@ class PostList extends Component {
         <span className="span-with-margin text-grey">{post.authorName}</span>
         <span className="span-with-margin text-grey"> • </span>
         <span className="span-with-margin text-grey">{new Date(post.time).toLocaleString()}</span>
+        <Link className = "btn btn d-inline commentButton" to="/comments/new" style = {{backgroundColor: "#f0f1f5"}}><i className="fas fa-comments"></i></Link>
+        <Comments />
         <hr />
-        
       </div>
     );
   }
