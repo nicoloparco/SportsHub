@@ -1,31 +1,82 @@
-import React from "react";
-import Article from "../Article";
+import React, {Component} from 'react';
+import Post from "../Post";
 
-function Articles() {
+class Article extends Component {
+
+  constructor(props) {
+    super(props);
+    this.state = {
+      items: [],
+      isLoaded: false,
+    }
+  }
+
+  componentDidMount(){
+
+    fetch('https://newsapi.org/v2/top-headlines?country=us&category=sports&apiKey=878f0b51b8a143b1b6efda15a5c88184')
+    .then(res => res.json())
+    .then(json => {
+      this.setState({
+        isLoaded: true,
+        items: json,
+      })
+    });
+
+  }
+
+  render(){
+    var{ isLoaded, items} = this.state;
+
+    if(!isLoaded){
+      return <div>loading...</div>;
+    }
+    else{
+
     return(
-            <div className = "col-md-7 my-3">
-                <div className = "container my-3 mx-1">
-                    <Article />
-                    <div className = "container border 4px border-success my-3 rounded">
-                        <h3>Dwyane Wade jersey retirement ceremony set for Februrary</h3>
-                        <img className = "image-thumbnail float-left mx-3" src="https://cdn.vox-cdn.com/thumbor/DWc2iBrZaE-TZWAYGHe6vHjChxc=/0x0:1924x2717/1200x800/filters:focal(757x602:1063x908)/cdn.vox-cdn.com/uploads/chorus_image/image/62833079/usa_today_11974165.0.jpg" alt="football" height="100px" width="100px"></img>
-                        <p className = "text-left">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis pretium, magna eget consequat aliquam, quam ligula feugiat libero, eget efficitur libero nibh ac dui. 
-                        Proin a turpis at leo luctus venenatis et a mi. Vivamus rutrum nisl enim, sed feugiat quam feugiat in. Aenean non pulvinar metus, ut interdum nisl. 
-                        Vivamus ultricies tincidunt orci in efficitur. Vestibulum aliquam facilisis libero id elementum. Integer a metus eget odio vulputate accumsan. 
-                        Mauris lobortis a neque eu eleifend.</p>
+      <div className= "col-md-7">
+      <div className = "container my-1 mx-1">
+      <div className="container" id="scrollbar" data-target="articles" style={{overflow:"scroll", height:"750px"}}>
+      <Post />
+
+          
+            {items.articles.map((item,i) => (
+              <div key={i} className = "container border border-success my-3" id = "articles" >
+                  <section id ="scrollArticle"></section>
+                <a href = {item.url} style={{textDecoration: "none"}}> <h3 className="mt-3" style = {{color:"black"}}>{item.title}</h3> </a>
+                <div className="row">
+                    <div className="col-md-4"><img className = "img-thumbnail my-2" src = {item.urlToImage} style = {{width:"auto", height:"150px"}}></img></div>
+                    <div className="col-md-8"><p className ="my-4">{item.description}</p></div>
+                </div>
+                <div className = "articleButtons my-1 text-right">
+                    <div className = "articleComments d-inline">
+                        <button className = "btn btn d-inline commentButton" style = {{backgroundColor: "#f0f1f5"}}>
+                            <span className = "d-inlne mx-1">
+                                <i class="fas fa-comments"></i>
+                            </span>
+                            Comment
+                        </button>
                     </div>
-                    <div className = "container border 4px border-success my-3 rounded">
-                        <h3>Astros found guilty of cheating</h3>
-                        <img className = "image-thumbnail float-left mx-3" src="https://static01.nyt.com/images/2020/01/13/sports/13xp-astros-explainer/13xp-astros-explainer-superJumbo.jpg" alt="football" height="100px" width="100px"></img>
-                        <p className = "text-left">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis pretium, magna eget consequat aliquam, quam ligula feugiat libero, eget efficitur libero nibh ac dui. 
-                        Proin a turpis at leo luctus venenatis et a mi. Vivamus rutrum nisl enim, sed feugiat quam feugiat in. Aenean non pulvinar metus, ut interdum nisl. 
-                        Vivamus ultricies tincidunt orci in efficitur. Vestibulum aliquam facilisis libero id elementum. Integer a metus eget odio vulputate accumsan. 
-                        Mauris lobortis a neque eu eleifend.</p>
+                    <div className = "articleSave d-inline">
+                        <button className = "btn btn d-inline saveButton" style = {{backgroundColor: "#f0f1f5"}}>
+                            <span className = "d-inlne mx-1">
+                                <i class="fas fa-bookmark"></i>
+                            </span>
+                            Save
+                        </button>
                     </div>
                 </div>
             </div>
-        
-    )
-};
+            ))}
+          
+      </div>
+      </div>
+      </div>
+    );
+  }
+}
 
-export default Articles
+
+
+}
+
+export default Article;
