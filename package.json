@@ -7,9 +7,9 @@
     "start:prod": "node index.js",
     "start:dev": "concurrently \"if-env NODE_ENV=production\" \"cd server && node index.js\" \"cd client && npm run start\"",
     "client": "cd client && npm run start",
-    "install": "cd client && npm install",
+    "postinstall": "cd client && npm install",
     "build": "cd client && npm run build",
-    "heroku-postbuild": "npm run build"
+    "heroku-postbuild": "cd client && yarn && yarn run build"
   },
   "author": "dev team",
   "license": "ISC",
