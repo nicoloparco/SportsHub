@@ -47,7 +47,7 @@ class Settings extends Component {
           <Field name="oldPassword" component={this.renderField} type="password" label="Old Password" />
           <Field name="newPassword" component={this.renderField} type="password" label="New Password" />
           <Field name="newPasswordConfirm" component={this.renderField} type="password" label="New Password Confirm" />
-          <button action="submit" className="btn btn-primary">Change Password</button>
+          <button action="submit" className="btn btn-success">Change Password</button>
         </form>
       </div>
     );

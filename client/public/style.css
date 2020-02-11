@@ -1,16 +1,13 @@
-/* Sticky footer styles
--------------------------------------------------- */
 html {
-    position: relative;
-    min-height: 100%; 
-  }
-  body {
-    /* Margin bottom by footer height */
-    font-family: 'Libre Caslon Text', serif;
-    background-color: #f0f1f5;
-    margin-bottom: 60px;
-  }
-  .footer {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  font-family: 'Libre Caslon Text', serif;
+  background-color: #f0f1f5;
+}
+
+.footer {
     color: #fff;
     /* position: absolute;
     bottom: 0;
@@ -22,13 +19,16 @@ html {
    }
    /* Custom page CSS 
   -------------------------------------------------- * */
-  /* .container {
-    border: 20px solid black !important
-  } */
-
-  #content {
-    margin-top: 90px;
+  
+  .container {
+    min-width: 100%;
+    margin: 0 ;
+    /* border: 20px solid black !important */
   }
+
+  /* #content {
+    margin-top: 90px;
+  } */
   
   /* button {
     background-color: #f0f1f5
@@ -67,9 +67,9 @@ html {
   .post {
     max-width: 800px;
     /* padding: 19px 29px 29px; */
-    padding: 40px;
+    padding: 10px;
     /* margin: 0 auto 20px; */
-    margin: 50px 0 50px 0;
+    margin: 0;
   }
   
   .f6 {
@@ -78,4 +78,9 @@ html {
   
   .text-grey {
     color: #9199a1 !important;
+  }
+
+  .border{
+    background-color: #ffffff;
+    
   }

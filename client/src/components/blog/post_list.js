@@ -2,7 +2,11 @@ import _ from 'lodash';
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
-import { fetchPosts } from '../../actions/index';
+import { fetchPosts } from '../../actions';
+
+
+
+
 
 class PostList extends Component {
 
@@ -30,6 +34,7 @@ class PostList extends Component {
         <span className="span-with-margin text-grey"> • </span>
         <span className="span-with-margin text-grey">{new Date(post.time).toLocaleString()}</span>
         <hr />
+        
       </div>
     );
   }
@@ -38,11 +43,15 @@ class PostList extends Component {
     // console.log(this.props.posts);
     return (
       <div className="post">
-        <Link className="btn btn-primary mb-5" to={'/posts/new'}>Publish A New Post</Link>
+        <Link className="btn btn-success mb-5" to={'/posts/new'}>Publish A New Post &raquo;</Link>
         {_.map(this.props.posts, post => {
           return this.renderPostSummary(post);
+          
         })}
+     
       </div>
+      
+      
     );
   }
 }

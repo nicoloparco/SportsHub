@@ -11,6 +11,7 @@ const mongoose = require('mongoose');
 // DB Setup (connect mongoose and instance of mongodb)
 mongoose.connect('mongodb://192.168.99.100/finalprojectdb');
 
+
 // App Setup (morgan and body-parser are middleware in Express)
 app.use(morgan('combined'));  // middleware for logging
 app.use(bodyParser.json({ type: '*/*' }));  // middleware for helping parse incoming HTTP requests
