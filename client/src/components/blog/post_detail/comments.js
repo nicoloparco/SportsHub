@@ -26,7 +26,7 @@ class Comments extends Component {
   render() {
     return (
       <div>
-        <h5 className="mt-5 mb-4">Comments</h5>
+        <h5 className="mt-5 mb-4 d-inline">Comments</h5>
         {_.map(this.props.comments, comment => {
           return this.renderComment(comment);
         })}

@@ -43,7 +43,7 @@ class PostList extends Component {
     // console.log(this.props.posts);
     return (
       <div className="post">
-        <Link className="btn btn-success mb-5" to={'/posts/new'}>Publish A New Post &raquo;</Link>
+        <Link className="btn btn-success mb-3" to={'/posts/new'}>Publish A New Post &raquo;</Link>
         {_.map(this.props.posts, post => {
           return this.renderPostSummary(post);
           

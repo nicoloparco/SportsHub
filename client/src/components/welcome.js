@@ -56,7 +56,7 @@ class Welcome extends Component {
                     <div className = "articleComments d-inline">
                             <Comments /> 
                             
-                <Link className = "btn btn d-inline commentButton" to="/comments/new" style = {{backgroundColor: "#f0f1f5"}}><i className="fas fa-comments"></i></Link>
+                <Link className = "btn btn d-inline commentButton" to="/comments/new" style = {{backgroundColor: "white"}}><i className="fas fa-comments"></i></Link>
           
                     </div>
                     
