@@ -17,7 +17,7 @@ class Header extends Component {
       // show a dropdown menu for authenticated user
       return (
         <div className="navbar nav-item dropdown ml-auto">
-          <a className="nav-link dropdown-toggle" href="http://example.com" id="dropdown02" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style={{color: "white"}}>{this.props.username}</a>
+          <a className="nav-link dropdown-toggle" href="http://example.com" id="dropdown02" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style={{color: "white"}}>{this.props.username}<i className='fas fa-user mx-3 fa-lg' style={{color: "white"}}></i></a>
           <div className="dropdown-menu" aria-labelledby="dropdown02">
             <Link className="dropdown-item" to="/my_posts">Your Posts</Link>
             <Link className="dropdown-item" to="/profile">Your Profile</Link>
@@ -37,7 +37,7 @@ class Header extends Component {
       // show a link to sign in or sign up
       return (
         <div className="navbar nav-item dropdown ml-auto">
-        <a className="nav-link dropdown-toggle" href="http://example.com" id="dropdown02" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style={{color: "white"}}>Login</a>
+        <a className="nav-link dropdown-toggle" href="http://example.com" id="dropdown02" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style={{color: "white"}}>Login<i className='fas fa-user mx-2 fa-lg' style={{color: "white"}}></i></a>
         <div className="dropdown-menu" aria-labelledby="dropdown02">
           <Link className="dropdown-item" to="/signup">Sign Up</Link>
           <Link className="dropdown-item" to="/signin">Sign In</Link>
