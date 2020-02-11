@@ -4,7 +4,7 @@
   "main": "index.js",
   "scripts": {
     "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
-    "start:prod": "concurrently \"cd server && npm run dev\" \"cd client && npm run start\"",
+    "start:prod": "concurrently \"cd server && node index.js\" \"cd client && npm run start\"",
     "start:dev": "concurrently \"if-env NODE_ENV=production\" \"cd server && npm run dev\" \"cd client && npm run start\"",
     "client": "cd client && npm run start",
     "seed": "node scripts/seedDB.js",
