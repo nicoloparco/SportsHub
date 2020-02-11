@@ -16,7 +16,7 @@ class Header extends Component {
     if (this.props.authenticated) {
       // show a dropdown menu for authenticated user
       return (
-        <div className="navbar nav-item dropdown ml-auto">
+        <div className="navbar nav-item dropdown ml-auto" style={{height: "50px"}}>
           <a className="nav-link dropdown-toggle" href="http://example.com" id="dropdown02" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style={{color: "white"}}>{this.props.username}👤</a>
           <div className="dropdown-menu" aria-labelledby="dropdown02">
             <Link className="dropdown-item" to="/my_posts">Your Posts</Link>
