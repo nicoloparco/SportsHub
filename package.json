@@ -3,12 +3,10 @@
   "version": "1.0.0",
   "main": "server.js",
   "scripts": {
-    "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
+    "start": "cd server && node server.js",
     "start:prod": "concurrently \"if-env NODE_ENV=production\" \"cd server && node server.js\" \"cd client && npm run start\"",
-    "start:dev": "concurrently \"if-env NODE_ENV=production\" \"cd server && node server.js\" \"cd client && npm run start\"",
-    "client": "cd client && npm run start",
     "install": "cd client && npm install",
-    "build": "cd client && npm run build",
+    "client": "cd client && npm run start",
     "heroku-postbuild": "npm run build"
   },
   "author": "dev team",
