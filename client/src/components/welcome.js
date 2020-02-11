@@ -49,7 +49,7 @@ class Welcome extends Component {
                   <section id ="scrollArticle"></section>
                 <a href = {item.url} style={{textDecoration: "none"}}> <h3 className="mt-3" style = {{color:"black"}}>{item.title}</h3> </a>
                 <div className="row">
-                    <div className="col-md-4"><img className = "img-thumbnail my-2" src = {item.urlToImage} style = {{width:"auto", height:"150px"}}></img></div>
+                    <div className="col-md-4"><img className = "img-thumbnail my-2" src = {item.urlToImage} style = {{width:"auto", height:"150px"}} alt="livearticles"></img></div>
                     <div className="col-md-8"><p className ="my-4">{item.description}</p></div>
                 </div>
                 <div className = "articleButtons my-1 text-right">

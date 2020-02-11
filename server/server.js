@@ -8,9 +8,17 @@ const router = require('./router');
 const mongoose = require('mongoose');
 // const cors = require('cors');  // we don't need it anymore, because we use proxy server instead
 
+<<<<<<< HEAD:server/index.js
 // DB Setup (connect mongoose and instance of mongodb)
 mongoose.connect('mongodb://localhost/finalprojectdb');
+=======
+>>>>>>> e3936162297fd560bd9add9065b825f2f9ff8515:server/server.js
 
+if (process.env.NODE_ENV === "production") {
+    app.use(express.static("client/build"));
+  }
+// DB Setup (connect mongoose and instance of mongodb)
+mongoose.connect(process.env.MONGODB_URI || "mongodb://dennis_the14th:gracie1@ds163480.mlab.com:63480/heroku_v53xql53");
 
 // App Setup (morgan and body-parser are middleware in Express)
 app.use(morgan('combined'));  // middleware for logging

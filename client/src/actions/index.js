@@ -46,7 +46,7 @@ export function signinUser({ email, password }, historyPush, historyReplace) {
         });
 
         // - Redirect (PUSH) to the route '/posts'
-        historyPush('/posts');
+        historyPush('/');
       })
       .catch(() => {  // If request is bad (sign in failed) ...
 
@@ -224,7 +224,7 @@ export function createPost({ title, categories, content }, historyPush, historyR
           type: CREATE_POST,
           payload: response.data,
         });
-        historyPush(`/posts/${response.data._id}`);
+        historyPush('/');
       })
       .catch(({response}) => {  // If create post failed, alert failure message
         historyReplace('/posts/new', {
@@ -323,7 +323,7 @@ export function createComment({ comment, postId }, clearTextEditor, historyRepla
         });
         dispatch(reset('comment_new'));  // - Clear form value (data)
         clearTextEditor();  // - Clear text editor (UI)
-        historyReplace(`/posts/${postId}`, null);  // - clear alert message
+        historyReplace('/');  // - clear alert message
       })
       .catch(({response}) => {  // If fail, render alert message
 
