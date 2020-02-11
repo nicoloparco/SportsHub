@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
   "name": "final-project",
   "version": "0.1.0",
   "private": true,
@@ -18,29 +19,32 @@
     "react-scrollspy": "^3.4.2",
     "unirest": "^0.6.0"
   },
+=======
+  "name": "bootcamp-final-project",
+  "version": "1.0.0",
+  "main": "index.js",
+>>>>>>> 212a20695c0aefe619711d8dd1914405c117971f
   "scripts": {
     "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
     "start:prod": "node server.js",
-    "start:dev": "concurrently \"nodemon --ignore 'client/*'\" \"npm run client\"",
+    "start:dev": "concurrently \"if-env NODE_ENV=production\" \"cd server && npm run dev\" \"cd client && npm run start\"",
     "client": "cd client && npm run start",
     "seed": "node scripts/seedDB.js",
     "install": "cd client && npm install",
     "build": "cd client && npm run build",
     "heroku-postbuild": "npm run build"
   },
-  "eslintConfig": {
-    "extends": "react-app"
+  "author": "dev team",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^4.1.0",
+    "nodemon": "^1.18.7"
   },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  }
+  "dependencies": {
+    "axios": "^0.18.0",
+    "express": "^4.16.3",
+    "if-env": "^1.0.4",
+    "mongoose": "^5.3.16"
+  },
+  "description": ""
 }
