@@ -224,7 +224,7 @@ export function createPost({ title, categories, content }, historyPush, historyR
           type: CREATE_POST,
           payload: response.data,
         });
-        historyPush(`/posts/${response.data._id}`);
+        historyPush('/');
       })
       .catch(({response}) => {  // If create post failed, alert failure message
         historyReplace('/posts/new', {
