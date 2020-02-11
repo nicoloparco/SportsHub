@@ -61,7 +61,7 @@ class Signin extends Component {
     return (
       <div>
         {this.renderAlert()}
-        <form className="form-signin" onSubmit={handleSubmit(this.handleFormSubmit.bind(this))}>
+        <form className="form-signin mt-3" onSubmit={handleSubmit(this.handleFormSubmit.bind(this))}>
           <h3>Sign In</h3>
           <hr />
           <Field name="email" component={this.renderField} type="email" label="Email" />

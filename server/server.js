@@ -8,6 +8,8 @@ const router = require('./router');
 const mongoose = require('mongoose');
 // const cors = require('cors');  // we don't need it anymore, because we use proxy server instead
 
+// DB Setup (connect mongoose and instance of mongodb)
+mongoose.connect('mongodb://localhost/finalprojectdb');
 
 if (process.env.NODE_ENV === "production") {
     app.use(express.static("client/build"));
