@@ -15,7 +15,7 @@ if (process.env.NODE_ENV === "production") {
     app.use(express.static("client/build"));
   }
 // DB Setup (connect mongoose and instance of mongodb)
-mongoose.connect(process.env.MONGODB_URI || "mongodb://dennis_the14th:gracie1@ds163480.mlab.com:63480/heroku_v53xql53");
+mongoose.connect(process.env.MONGODB_URI || "mongodb://192.168.99.100/finalprojectdb");
 
 // App Setup (morgan and body-parser are middleware in Express)
 app.use(morgan('combined'));  // middleware for logging
