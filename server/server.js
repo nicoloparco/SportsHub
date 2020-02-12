@@ -20,7 +20,7 @@ mongoose.connect(process.env.MONGODB_URI || "mongodb://dennis_the14th:gracie1@ds
 // App Setup (morgan and body-parser are middleware in Express)
 app.use(morgan('combined'));  // middleware for logging
 app.use(bodyParser.json({ type: '*/*' }));  // middleware for helping parse incoming HTTP requests
-// app.use(cors());  // middleware for circumventing (规避) cors error
+// app.use(cors());  // middleware for circumventing cors error
 
 // Router Setup
 router(app);
