@@ -1,6 +1,6 @@
 import React from "react";
 import Welcome from "./welcome";
-import Scores from "./Scores"
+import Scores from "./scores"
 
 
 
