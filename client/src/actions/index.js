@@ -323,7 +323,7 @@ export function createComment({ comment, postId }, clearTextEditor, historyRepla
         });
         dispatch(reset('comment_new'));  // - Clear form value (data)
         clearTextEditor();  // - Clear text editor (UI)
-        historyReplace(`/comments/${postId}`);  // - clear alert message
+        historyReplace(`/`);  // - clear alert message
       })
       .catch(({response}) => {  // If fail, render alert message
 
