@@ -4,16 +4,30 @@
 
 ### About app
 
-- This app is a MERN Stack application. The Sportshub basically is a sports app that pulls its information from API calls. There is the article, post and comment section as well as the live score for 4 different sports section. User gets to sign up and then log in so they can gain access to the  post and comment section features.
+- A sports news and discussion app that combines the best aspects of media outlets such as ESPN as well as community discussion services such as Reddit. This app provides live scores for several different sports, updated news articles, and a place for users to create and comment on sports related content.
+
+- Full-Stack App that includes user log-in funcationality, api calls, database storage, dom manipulation, and more
 
 
 ### Technolgies
 
+- ReactJS
+
+- MongoDB/Mongoose
+
+- ExpressJS
+
+- NodeJS
+
 - Javascript / (ES6)
+
+- HTML5
+
+- CSS3
 
 - Heroku (for deployment)
 
-- API 
+- AJAX
 
 - Bootstrap4
 
